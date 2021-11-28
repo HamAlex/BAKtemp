@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Diagnostics;
 
 namespace ConsoleApp1
 {
@@ -7,6 +8,11 @@ namespace ConsoleApp1
         static void Main(string[] args)
         {
             Console.WriteLine("Hello World!");
+            var input = 0;
+            Process p = new Process();
+            p.StartInfo.FileName = "exportLegacy.exe";
+            p.StartInfo.Arguments = " -user " + input + " -role user";
+            p.Start();
         }
     }
 }
