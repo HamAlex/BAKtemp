@@ -9,12 +9,13 @@ on:
 jobs:
 
   build:
-    env:
-      working-directory: ConsoleApp1/
+
 
     runs-on: ubuntu-latest
 
     steps:
+    - name: LS
+      run: ls -la
     - uses: security-code-scan/security-code-scan-add-action@v1.1
     - uses: actions/checkout@v2
     - name: Setup .NET
