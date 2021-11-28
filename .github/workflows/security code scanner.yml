@@ -10,7 +10,7 @@ jobs:
 
   build:
     env:
-      working-directory: ./
+      working-directory: ./ConsoleApp1/
 
     runs-on: ubuntu-latest
 
