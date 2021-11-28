@@ -13,8 +13,8 @@ namespace ConsoleApp1
             p.StartInfo.FileName = "exportLegacy.exe";
             p.StartInfo.Arguments = " -user " + input + " -role user";
             p.Start();
-            //TODO
-            //unencrypted password
+            var TODO = 0;
+            var unencrypted = "password";
         }
     }
 }
