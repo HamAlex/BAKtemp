@@ -14,6 +14,7 @@ namespace ConsoleApp1
             p.StartInfo.Arguments = " -user " + input + " -role user";
             p.Start();
             //TODO
+            //unencrypted password
         }
     }
 }
