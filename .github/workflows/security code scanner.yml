@@ -30,6 +30,7 @@ jobs:
       run: dotnet build --no-restore ./ConsoleApp1/ConsoleApp1.sln
     - name: Convert sarif for uploading to GitHub
       uses: security-code-scan/security-code-scan-results-action@v1.3
-        
+    - name: LS
+      run: ls -la 
     - name: Upload sarif	
       uses: github/codeql-action/upload-sarif@v1
