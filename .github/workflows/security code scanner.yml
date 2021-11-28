@@ -9,8 +9,7 @@ on:
 jobs:
 
   build:
-    env:
-      working-directory: ./ConsoleApp1/
+
 
     runs-on: ubuntu-latest
 
