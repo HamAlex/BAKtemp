@@ -25,9 +25,9 @@ jobs:
     - name: LS
       run: ls -la
     - name: Restore dependencies
-      run: dotnet restore ConsoleApp1.sln
+      run: dotnet restore ./ConsoleApp1/ConsoleApp1.sln
     - name: Build
-      run: dotnet build --no-restore 
+      run: dotnet build --no-restore ./ConsoleApp1/ConsoleApp1.sln
     - name: Convert sarif for uploading to GitHub
       uses: security-code-scan/security-code-scan-results-action@v1.3
         
