@@ -21,10 +21,10 @@ jobs:
       id: code-analysis
       with:
         solution: ./ConsoleApp1/ConsoleApp1.sln
-        build-breaking: true
+        build-breaking: false
         all-categories: all
-        sarifFile: ./dotnetAnalyzers_result.sarif
         
     - uses: github/codeql-action/upload-sarif@v1
       with:
-        sarif_file: ./dotnetAnalyzers_result.sarif 
+        name: analysis_results.sarif
+        path: ${{ steps.code-analysis.outputs.sarifFile }} 
