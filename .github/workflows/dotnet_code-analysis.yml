@@ -17,10 +17,10 @@ jobs:
       run: dotnet restore ./ConsoleApp1/ConsoleApp1.sln
 
     - name: Run .NET Code Analysis
-      uses: dotnet/code-analysis@v1
+      uses: dotnet/code-analysis@main
       id: code-analysis
       with:
-        solution: ConsoleApp1.sln
+        solution: ./ConsoleApp1/ConsoleApp1.sln
         build-breaking: true
         all-categories: all
         sarifFile: ./dotnetAnalyzers_result.sarif
