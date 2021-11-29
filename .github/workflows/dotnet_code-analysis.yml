@@ -14,13 +14,13 @@ jobs:
     - uses: actions/checkout@v2
 
     - name: Run NuGet restore
-      run: dotnet restore <%path_to_project_or_solution%>
+      run: dotnet restore ./ConsoleApp1/ConsoleApp1.sln
 
     - name: Run .NET Code Analysis
       uses: dotnet/code-analysis@v1
       id: code-analysis
       with:
-        solution: MySolution.sln
+        solution: ConsoleApp1.sln
         build-breaking: true
         all-categories: all
         sarifFile: ./dotnetAnalyzers_result.sarif
