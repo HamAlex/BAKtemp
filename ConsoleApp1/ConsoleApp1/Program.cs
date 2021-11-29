@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Diagnostics;
 using System.Security.Cryptography;
 
@@ -17,6 +16,8 @@ namespace ConsoleApp1
             var unencrypted = "password";
             var username = "user1";
             var password = "password";
+
+            password = unencrypted + username + TODO;
 
             HMACMD5 crypto = new HMACMD5();
 
