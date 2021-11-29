@@ -24,7 +24,6 @@ jobs:
         build-breaking: false
         all-categories: all
         
-    - uses: github/codeql-action/upload-sarif@v2
+    - uses: github/codeql-action/upload-sarif@v1
       with:
-        name: analysis_results.sarif
-        path: ${{ steps.code-analysis.outputs.sarifFile }} 
+        sarif_file: ${{ steps.code-analysis.outputs.sarifFile }} 
