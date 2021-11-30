@@ -10,17 +10,19 @@ on:
     
 jobs:
   SCS:
-    runs-on: ubuntu-latest
-    steps:     
+     runs-on: windows-latest
+     steps:     
       - uses: actions/checkout@v2
+      - uses: nuget/setup-nuget@v1.0.5
+      - uses: microsoft/setup-msbuild@v1.0.2
       
       - name: Set up projects
         uses: security-code-scan/security-code-scan-add-action@main
 
       - name: Build
         run: |
-          dotnet restore
-          dotnet build
+          nuget restore
+          msbuild
         
       - name: Convert sarif for uploading to GitHub
         uses: security-code-scan/security-code-scan-results-action@main
